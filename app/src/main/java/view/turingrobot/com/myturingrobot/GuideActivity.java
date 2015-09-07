@@ -18,8 +18,10 @@ import android.widget.LinearLayout.LayoutParams;
 import java.util.ArrayList;
 import java.util.List;
 
+import view.turingrobot.com.myturingrobot.utils.ActivityAnimUitl;
 import view.turingrobot.com.myturingrobot.utils.MyToastUitl;
 import view.turingrobot.com.myturingrobot.utils.SharedPreferencesUitl;
+import view.turingrobot.com.myturingrobot.view.DepthPageTransformer;
 import view.turingrobot.com.myturingrobot.view.RotateDownPageTransformer;
 
 /**
@@ -108,7 +110,7 @@ public class GuideActivity extends Activity {
         //数据适配器
         guide_vp.setAdapter(new GuideMyAdapter());
         //动画
-        guide_vp.setPageTransformer(true, new RotateDownPageTransformer());
+        guide_vp.setPageTransformer(true, new DepthPageTransformer());
         //监听
         guide_vp.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
@@ -154,6 +156,7 @@ public class GuideActivity extends Activity {
      */
     private void forwardSplash() {
         startActivity(new Intent(mContext, SplashActivity.class));
+        ActivityAnimUitl.isRightLeft(GuideActivity.this);
         finish();
     }
 
@@ -168,7 +171,7 @@ public class GuideActivity extends Activity {
         pageViews.add(img1);
 
         ImageView img2 = new ImageView(mContext);
-        img2.setBackgroundResource(R.mipmap.pager4);
+        img2.setBackgroundResource(R.mipmap.pager2);
         pageViews.add(img2);
 
         ImageView img3 = new ImageView(mContext);
@@ -176,8 +179,12 @@ public class GuideActivity extends Activity {
         pageViews.add(img3);
 
         ImageView img4 = new ImageView(mContext);
-        img4.setBackgroundResource(R.mipmap.pager2);
+        img4.setBackgroundResource(R.mipmap.pager4);
         pageViews.add(img4);
+
+        ImageView img5 = new ImageView(mContext);
+        img5.setBackgroundResource(R.mipmap.pager5);
+        pageViews.add(img5);
     }
 
     /**

@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class MyToastUitl {
     public final static int SHORT_TOAST = 0;
     public final static int LONG_TOAST = 1;
-    private final static boolean TOAST_FLAG = true;
+    private final static boolean TOAST_FLAG = false;
 
     /**
      * 内部测试的待开关
