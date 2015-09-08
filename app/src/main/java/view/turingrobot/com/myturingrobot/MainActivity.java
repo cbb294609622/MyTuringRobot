@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import view.turingrobot.com.myturingrobot.utils.MyToastUitl;
+
 public class MainActivity extends Activity {
 
     private Context mContext;
@@ -15,7 +17,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext = MainActivity.this;
-
+        MyToastUitl.showToastFlag(mContext,"主界面");
         initView();
         initData();
 

@@ -2,9 +2,13 @@ package view.turingrobot.com.myturingrobot;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 import view.turingrobot.com.myturingrobot.utils.ActivityAnimUitl;
 import view.turingrobot.com.myturingrobot.utils.MyToastUitl;
@@ -24,7 +28,19 @@ public class SplashActivity extends Activity {
         }
         setContentView(R.layout.activity_splash);
         mContext = SplashActivity.this;
-        MyToastUitl.showToastFlag(mContext,"广告界面",MyToastUitl.SHORT_TOAST);
+
+        MyToastUitl.showToastFlag(mContext,"广告界面");
+
+        Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                startActivity(new Intent(mContext,MainActivity.class));
+                ActivityAnimUitl.isRightLeft(SplashActivity.this);
+                finish();
+            }
+        };
+        timer.schedule(timerTask,1000*4);
     }
 //    @Override
 //    public void onBackPressed() {

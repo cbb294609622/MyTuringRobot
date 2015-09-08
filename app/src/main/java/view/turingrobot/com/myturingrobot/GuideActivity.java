@@ -64,11 +64,11 @@ public class GuideActivity extends Activity {
         isForst = false;
         if (isForst) {
             //不是第一次进入应用
-            MyToastUitl.showToastFlag(mContext, "不是第一次进入", MyToastUitl.SHORT_TOAST);
+            MyToastUitl.showToastFlag(mContext, "不是第一次进入");
             forwardSplash();
         } else {
             //是第一次进入应用
-            MyToastUitl.showToastFlag(mContext, "是第一次进入", MyToastUitl.LONG_TOAST);
+            MyToastUitl.showToastFlag(mContext, "是第一次进入");
             SharedPreferencesUitl.saveBooleanData(mContext, "isForst", true);
             initFill();
         }
@@ -118,6 +118,7 @@ public class GuideActivity extends Activity {
             public void onPageSelected(int position) {
 
                 if (position == pageViews.size() - 1) {
+                    guide_ll.setVisibility(View.GONE);
                     guide_btn.setVisibility(View.VISIBLE);
                     guide_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -127,6 +128,7 @@ public class GuideActivity extends Activity {
                     });
                 }else{
                     guide_btn.setVisibility(View.GONE);
+                    guide_ll.setVisibility(View.VISIBLE);
                 }
 
                 //处理点的逻辑
@@ -190,7 +192,6 @@ public class GuideActivity extends Activity {
     /**
      * ViewPager的数据适配器
      *
-     * @author 爱信游
      */
     class GuideMyAdapter extends PagerAdapter {
 
