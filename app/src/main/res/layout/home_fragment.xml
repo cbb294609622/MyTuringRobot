@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <view.turingrobot.com.myturingrobot.view.PullToZoomListView
+        android:id="@+id/home_plv"
+        android:layout_width="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:listSelector="@drawable/home_listview_select"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+    </view.turingrobot.com.myturingrobot.view.PullToZoomListView>
+
+</RelativeLayout>

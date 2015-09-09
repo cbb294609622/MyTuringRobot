@@ -7,3 +7,7 @@
     3.2 我想如果出一个HTW比较合适。毕竟能吸引大众！
     3.3 竟然没提交上去，什么情况？
 ## 4.增加了欢迎界面，利用Timer 和TimerTask 进行了4秒的间隔，进入MainActivity。
+## 5.主界面HomeFragment 做成了在github上的一个动效，不过 这不是我的终极目标。下次更新就是要该这个，内部目前不会去实现。
+    5.1 增加了一个BaseFragment为以后做左右侧滑准备。
+    5.2 增加了一个ListView的Base，方面使用ListView的Adapter。
+    5.3 实现了主界面的动效（目前）。

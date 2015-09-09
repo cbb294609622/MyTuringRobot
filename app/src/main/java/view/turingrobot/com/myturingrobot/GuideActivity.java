@@ -118,7 +118,6 @@ public class GuideActivity extends Activity {
             public void onPageSelected(int position) {
 
                 if (position == pageViews.size() - 1) {
-                    guide_ll.setVisibility(View.GONE);
                     guide_btn.setVisibility(View.VISIBLE);
                     guide_btn.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -128,7 +127,6 @@ public class GuideActivity extends Activity {
                     });
                 }else{
                     guide_btn.setVisibility(View.GONE);
-                    guide_ll.setVisibility(View.VISIBLE);
                 }
 
                 //处理点的逻辑
