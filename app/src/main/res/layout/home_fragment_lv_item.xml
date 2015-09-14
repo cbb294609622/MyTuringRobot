@@ -5,21 +5,18 @@
     android:orientation="vertical"
     >
     <TextView
-        android:id="@+id/lv_item_name"
+        android:id="@+id/item_title"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginLeft="30dp"
-        android:singleLine="true"
-        android:text="aaaaa"
-        android:gravity="center_vertical"
+        android:text="123木头人"
         android:textSize="20sp"
-        android:textColor="@color/white_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginLeft="20dp"
         android:background="@android:color/darker_gray"
         />
-
 </LinearLayout>

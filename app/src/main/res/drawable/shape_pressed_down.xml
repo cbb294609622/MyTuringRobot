@@ -6,7 +6,6 @@
     <!-- dashWidth 点的宽度 dashGap 点的间距 -->
 	<!-- <stroke android:width="3dp" android:color="#00ff00" android:dashWidth="3dp" android:dashGap="5dp"/> -->
     <corners
-        android:radius="10dp"
         />
 
 </shape>

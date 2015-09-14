@@ -61,7 +61,7 @@ public class GuideActivity extends Activity {
 
     private void initData() {
         boolean isForst = SharedPreferencesUitl.getBooleanData(mContext, "isForst", false);
-        isForst = false;
+//        isForst = false;
         if (isForst) {
             //不是第一次进入应用
             MyToastUitl.showToastFlag(mContext, "不是第一次进入");
@@ -117,6 +117,10 @@ public class GuideActivity extends Activity {
             @Override
             public void onPageSelected(int position) {
 
+            }
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 if (position == pageViews.size() - 1) {
                     guide_btn.setVisibility(View.VISIBLE);
                     guide_btn.setOnClickListener(new View.OnClickListener() {
@@ -137,11 +141,6 @@ public class GuideActivity extends Activity {
                         viewList.get(i).setBackgroundResource(R.mipmap.point_unfocused);
                     }
                 }
-            }
-
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
 
             @Override
